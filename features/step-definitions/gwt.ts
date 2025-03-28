@@ -8,3 +8,16 @@ Given('{actor} navigates to {string}', { timeout: 70000 }, async (actor: Actor, 
         General.navigateToUrl(url),
     )
 })
+
+When('{pronoun} press {string}', { timeout: 70000 }, async (actor: Actor, element: string) => {
+    await actor.attemptsTo(
+        General.pressButton(element),
+    )
+})
+
+Then('{pronoun} should hear the song playing', { timeout: 70000 }, async (actor: Actor) => {
+    await actor.attemptsTo(
+        General.assertAudioIsPlaying(),
+    )
+})
+

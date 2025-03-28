@@ -1,3 +1,6 @@
+# WDIO
+target
+
 lib-cov
 *.seed
 *.log
